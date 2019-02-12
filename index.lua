@@ -23,9 +23,13 @@ local colorToggler = {
 
 main.application.mouse.pressedButtonsChanged:addCallback(
     function()
-        -- Detect a click.
+    -- Detect a click.
     if (#main.application.mouse.pressedButtons == 0)
     then
-        print("Detected a mouse click")
+        -- Toggle screen color.
+        local color = colorToggler:toggledColor()
+        print("Set screen color to", color[1], color[2], color[3])
+        main.application.camera.clearColor = color
     end
+end
 )
