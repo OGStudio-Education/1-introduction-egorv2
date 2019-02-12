@@ -1,1 +1,1 @@
-main.application.camera.clearColor = {0, 1, 0}
+main.application.camera.clearColor = {1, 0, 0}
